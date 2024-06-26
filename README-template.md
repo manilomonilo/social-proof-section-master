@@ -1,0 +1,1 @@
+Hi there, this is my code for social proof section master challenge, I'm hoping for any tips on code structure and good practices and how I can improve my code, I will absolutely respond to anyone who gives me any advice and implements the changes you recommend, thank you guys already :).

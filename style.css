@@ -1,0 +1,215 @@
+@font-face {
+    font-family: league;
+    src: url(fonts/LeagueSpartan-VariableFont_wght.ttf);
+}
+
+*,
+::before,
+::after {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --Dark-purple: hsl(300, 43%, 22%);
+    --Pink: hsl(333, 80%, 67%);
+    --Light-purple: hsl(303, 10%, 53%);
+    --Very-Light-purple: hsl(300, 24%, 96%);
+    --White: hsl(0, 0%, 100%);
+
+    --fw-regular: 400;
+    --fw-medium: 500;
+    --fw-bold: 700;
+
+    --Line-height: 1.5;
+    --Font-size: 15px;
+    --h1: 2.8rem;
+    --h2: 1rem;
+    --h3: .95rem;
+    --parg: 1rem;
+
+}
+
+body {
+    font-family: League, sans-serif;
+    font-size: var(--font-size);
+    line-height: var(--Line-height);
+}
+
+.main-card {
+    position: relative;
+    margin: auto;
+    padding: 1.5rem;
+}
+
+.main-content {
+    margin: 1rem;
+
+}
+
+.main-title {
+    color: var(--Dark-purple);
+    font-size: var(--h1);
+    line-height: .9;
+    margin: .6rem;
+    margin-bottom: 1.2rem;
+    text-align: center;
+}
+
+.main-parg {
+    color: var(--Light-purple);
+    text-align: center;
+    margin-top: .1rem;
+}
+
+.rating {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rate-list {
+    text-align: center;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+    background-color: var(--Very-Light-purple);
+    padding: .8rem;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.stars-icons {
+    list-style: none;
+}
+
+.star {
+    display: inline-block;
+    margin-left: .3rem;
+}
+
+.rate-parg {
+    color: var(--Dark-purple);
+    font-weight: var(--fw-bold);
+}
+
+.card {
+    background: var(--Dark-purple);
+    color: var(--White);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.im-na-ve {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+
+.person-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 1.8rem;
+}
+
+.card-title {
+    font-size: var(--h2);
+}
+
+.verified {
+    font-size: var(--h3);
+    color: var(--Pink);
+}
+
+.bg-img {
+    position: absolute;
+}
+
+.bg-img .desk {
+    display: none;
+}
+
+.bg-img .mob .top {
+    top: 0;
+    left: 0;
+}
+
+.bg-img .mob .bot {
+    bottom: 0;
+    right: 0;
+}
+
+@media (min-width: 1200px) {
+    .main-card {
+        display: grid;
+        grid-template-areas: "main rate"
+            "card card";
+        grid-template-columns: 35% 65%;
+        padding: 5rem;
+    }
+
+    .main-content {
+        grid-area: main;
+    }
+
+    .main-title {
+        text-align: start;
+    }
+
+    .main-parg {
+        text-align: start;
+    }
+
+    .rating {
+        grid-area: rate;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .rate-list {
+        display: flex;
+        justify-content: space-around;
+        width: 400px;
+    }
+
+    .rate-list:nth-child(2) {
+        transform: translate(3.5rem);
+    }
+
+    .rate-list:nth-child(3) {
+        transform: translate(7rem);
+    }
+
+    .cards {
+        margin-top: 2rem;
+        grid-area: card;
+        display: flex;
+        gap: 1rem;
+    }
+
+    .card {
+        width: 350px;
+        padding: 2.3rem;
+    }
+
+    .card:nth-child(2) {
+        transform: translateY(1.5rem);
+    }
+
+    .card:nth-child(3) {
+        transform: translateY(3rem);
+    }
+
+    .bg-img .desk {
+        display: unset;
+    }
+
+    .bg-img .mob {
+        display: none;
+    }
+}
